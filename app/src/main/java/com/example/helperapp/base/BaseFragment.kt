@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.StringRes
 import androidx.fragment.app.Fragment
+import com.example.helperapp.custom.LoadingDialogFragment
 
 
 abstract class BaseFragment : Fragment(), MvpView {

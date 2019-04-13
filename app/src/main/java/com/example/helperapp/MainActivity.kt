@@ -1,6 +1,5 @@
 package com.example.helperapp
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import com.example.helperapp.base.BaseActivity

@@ -36,6 +36,10 @@ dependencies {
     implementation "com.github.bumptech.glide:glide:4.9.0"
     annotationProcessor "com.github.bumptech.glide:compiler:4.8.0"
 
+    // reactive
+    implementation "io.reactivex.rxjava2:rxjava:2.2.0"
+    implementation "io.reactivex.rxjava2:rxandroid:2.1.0"
+
     api kapt("com.google.auto.value:auto-value-annotations:1.6.2")
     annotationProcessor kapt("com.google.auto.value:auto-value:1.6.2")
     testImplementation 'junit:junit:4.12'

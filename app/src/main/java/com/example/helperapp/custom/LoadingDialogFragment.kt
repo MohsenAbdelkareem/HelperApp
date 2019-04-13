@@ -1,4 +1,4 @@
-package com.example.helperapp.base
+package com.example.helperapp.custom
 
 import android.view.ViewGroup
 import android.os.Bundle
@@ -7,6 +7,7 @@ import android.content.Context
 import android.view.View
 import androidx.fragment.app.FragmentActivity
 import com.example.helperapp.R
+import com.example.helperapp.base.BaseDialog
 
 open class LoadingDialogFragment : BaseDialog(){
 

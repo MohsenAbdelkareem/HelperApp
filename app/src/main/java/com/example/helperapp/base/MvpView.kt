@@ -1,7 +1,8 @@
 
 package com.example.helperapp.base
 
-import android.support.annotation.StringRes
+import androidx.annotation.StringRes
+
 
 interface MvpView {
 

@@ -16,6 +16,7 @@ import androidx.annotation.NonNull
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import com.example.helperapp.custom.LoadingDialogFragment
 import com.example.helperapp.utils.LocaleHelper
 import com.example.helperapp.utils.NetworkUtils
 import com.google.android.material.snackbar.Snackbar
