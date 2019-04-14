@@ -22,7 +22,7 @@ import java.util.Locale
 
 object LocationUtils {
 
-    const val REQUEST_CHECK_SETTINGS = 503
+    private const val REQUEST_CHECK_SETTINGS = 503
 
     @SuppressLint("MissingPermission")
     fun displayLocationSettingsRequest(context: Context, locationListener: LocationListener) {

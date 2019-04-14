@@ -11,11 +11,11 @@ import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.provider.Settings
-import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentActivity
 import android.transition.TransitionInflater
 import android.util.Patterns
 import android.view.View
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
 
 
 import java.io.IOException
@@ -46,24 +46,6 @@ object CommonUtils {
     @SuppressLint("all")
     fun getDeviceId(context: Context): String {
         return Settings.Secure.getString(context.contentResolver, Settings.Secure.ANDROID_ID)
-    }
-
-    fun isEmailValid(email: String): Boolean {
-        val pattern: Pattern = Patterns.EMAIL_ADDRESS
-        val matcher: Matcher
-        matcher = pattern.matcher(email)
-        return matcher.matches()
-    }
-
-    fun isMobileValid(mobile: String): Boolean {
-
-        return (mobile.startsWith("012") || mobile.startsWith("011") ||
-                mobile.startsWith("010") || mobile.startsWith("015")) && mobile.length == 11
-    }
-
-    fun isPasswordValid(password: String): Boolean {
-
-        return password.length >= 6
     }
 
     @Throws(IOException::class)

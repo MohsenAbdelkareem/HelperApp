@@ -3,7 +3,6 @@ package com.example.helperapp.base
 import com.example.helperapp.utils.NetworkState
 
 import androidx.lifecycle.MutableLiveData
-import com.example.helperapp.utils.rx.AppSchedulerProvider
 import io.reactivex.disposables.CompositeDisposable
 
  open class BaseRepository {
@@ -13,9 +12,5 @@ import io.reactivex.disposables.CompositeDisposable
     }
     val compositeDisposable: CompositeDisposable by lazy {
         CompositeDisposable()
-    }
-
-    val appSchedulerProvider: AppSchedulerProvider by lazy {
-        AppSchedulerProvider()
     }
 }

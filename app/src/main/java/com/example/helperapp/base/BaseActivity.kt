@@ -29,10 +29,11 @@ abstract class BaseActivity : AppCompatActivity(), MvpView, BaseFragment.Callbac
         get() = NetworkUtils.isNetworkConnected(applicationContext)
 
 
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
         LocaleHelper.setLocale(this, "ar")
         setContentView(contentView())
+        setUp()
     }
 
 

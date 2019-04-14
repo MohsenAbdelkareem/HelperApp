@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">HelperApp</string>
+    <string name="app_market_link">app link</string>
+    <string name="app_google_play_store_link">app store link</string>
 </resources>
