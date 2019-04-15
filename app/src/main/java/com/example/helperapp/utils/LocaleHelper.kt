@@ -48,7 +48,6 @@ object LocaleHelper {
     }
 
 
-    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
     private fun updateAppResources(context: Context, language: String?): Context {
         val locale = Locale(language)
         Locale.setDefault(locale)

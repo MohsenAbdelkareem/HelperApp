@@ -17,6 +17,7 @@ import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.example.helperapp.custom.LoadingDialogFragment
+import com.example.helperapp.data.pref.AppPreferencesHelper
 import com.example.helperapp.utils.LocaleHelper
 import com.example.helperapp.utils.NetworkUtils
 import com.google.android.material.snackbar.Snackbar
@@ -28,6 +29,9 @@ abstract class BaseActivity : AppCompatActivity(), MvpView, BaseFragment.Callbac
     override val isNetworkConnected: Boolean
         get() = NetworkUtils.isNetworkConnected(applicationContext)
 
+    val pref by lazy {
+        AppPreferencesHelper.getInstance(this)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,12 +46,7 @@ abstract class BaseActivity : AppCompatActivity(), MvpView, BaseFragment.Callbac
         super.onConfigurationChanged(newConfig)
     }
 
-    protected override fun onRestoreInstanceState(savedInstanceState: Bundle) {
-        super.onRestoreInstanceState(savedInstanceState)
-    }
-
-
-    protected override fun attachBaseContext(newBase: Context) {
+    override fun attachBaseContext(newBase: Context) {
         LocaleHelper.setLocale(newBase, "ar")
         super.attachBaseContext(newBase)
     }
@@ -109,10 +108,9 @@ abstract class BaseActivity : AppCompatActivity(), MvpView, BaseFragment.Callbac
         finish()
     }
 
+    protected abstract fun contentView(): Int
 
     protected abstract fun setUp()
-
-    protected abstract fun contentView(): Int
 
     interface AlertDialogClickListener {
         /**

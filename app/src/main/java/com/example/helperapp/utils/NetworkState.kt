@@ -41,10 +41,11 @@ abstract class NetworkState {
     }
 
     @Retention(AnnotationRetention.SOURCE)
-    @IntDef(GenericType.LOGIN)
+    @IntDef(GenericType.LOGIN, GenericType.CONNECTION)
     annotation class GenericType {
         companion object {
             const val LOGIN = 0
+            const val CONNECTION = 1
         }
     }
 
